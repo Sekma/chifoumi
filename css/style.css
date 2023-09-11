@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  html, body{
+    height: 100%;
+  }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+/* style section 1 -- l'en-tete de la page (score) */
+.score{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+    margin-top: 5px; 
+}
+h1{
+    width: 200px;
+    color: black;
+    font-size: xx-large;
+    text-align: center;
+}
+#result{
+    height: 100px;
+    width:100px;
+}
+/* End of style section 1 */
+
+/* style section 2 -- start et restart */
+.acceuil{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.win, .lose{
+    width: 300px;
+}
+.start, .restart{
+    background-color: rgb(126, 197, 255);
+    box-shadow: 0 0 10px 2px rgb(126, 197, 255);
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+}
+.start:hover, .restart:hover{
+    cursor: pointer;
+    background-color: rgb(165, 215, 255);
+}
+.start:active, .restart:active{
+    background-color: rgb(126, 197, 255);
+}
+.start h1{
+    margin: 30px auto;
+    color: rgb(0, 0, 120);
+}
+.restart h1{
+    margin: 30px auto;
+    color: rgb(0, 0, 120);
+}
+/* End of style section 2 */
+
+/* style section 3 -- les images du chaque coup */
+.img{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap: 70px;
+}
+.player, .computer{
+    height: 200px;
+    min-width:210px;
+    background-size: cover;
+    transition: background 1s;
+}
+/* End style section 3 */
+
+/* style section 4 -- les boutons du jeux */
+.btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+.click{
+    height: 200px;
+    width:90px;
+    background-size: cover;
+    border-radius: 5%;
+}
+.click:hover{
+    cursor: pointer;
+}
+.click:active{
+   background-color: rgb(192, 192, 255);
+   box-shadow: 0 0 5px 2px rgb(151, 151, 255);
+}
+/* End of style section 4 */
+
+/* style footer */
+footer{
+   
+    margin-bottom: 10px;
+    text-align: center;
+    color: grey;
+  }
+  /* End of style footer */
+
+  /* la version mobile */
+  @media (max-width: 480px){
+.score{
+    flex-direction: column-reverse;
+}
+.score, .img, .btn{
+    gap: 5px;
+}
+.click{
+    height: 160px;
+    width:80px;
+}
+.player, .computer{
+    height: 140px;
+    min-width:140px;
+}
+  }

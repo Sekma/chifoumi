@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <link rel="icon" href="img/favicon.ico">
+        <title>Chifoumi</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        <!-- section 1 -- l'en-tete de la page (score) -->
+        <section class="score">
+            <h1>Player<br><span id="myscore"> 0</span><hr></h1>
+            <img src="img/happy.png" id="result">
+            <h1>Computer<br><span id="advscore"> 0</span><hr></h1>    
+        </section>
+
+        <!-- section 2 -- start et restart -->
+        <section class="acceuil">
+            <img class="win" src="img/bravoo.png" alt="win">
+            <img class="lose" src="img/dommage.png" alt="lose">
+            <h1 id="winLose"></h1>
+            <div class="start" onclick="start()"><h1>Start</h1></div>
+            <div class="restart"><h1>Restart</h1></div>
+         </section>
+
+         <!-- section 3 -- les images du chaque coup-->
+        <section class="img">
+            <div class="player" id="player"></div>
+            <div class="computer" id="computer"></div>
+        </section>
+        
+        <!-- section 4 -- les boutons du jeux -->
+        <section class="btn">            
+                <img src="img/button-pr.png" class="click" onclick="choix(0)">
+                <img src="img/button-pp.png" class="click" onclick="choix(1)">
+                <img src="img/button-cs.png" class="click" onclick="choix(2)">
+        </section>
+
+        <!-- copyright -->
+        <footer>
+            <span id="copyright">Sekma &copy;  Chifoumi - 2023</span>
+        </footer>
+
+        <!-- script -->
+        <script src="js/script.js"></script>
+        <script src="serviceWorker.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/serviceWorker.js')
+            .then(registration => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.error('Service Worker registration failed:', error);
+            });
+        }
+      </script>
+    </body>
+</html>

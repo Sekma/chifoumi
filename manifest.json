@@ -1,0 +1,16 @@
+{
+    "name":"Game Chifoumi",
+    "short_name":"Chifoumi",
+    "description":"game site",
+    "start_url":".",
+    "display":"standalone",
+    "background_color":"rgb(255, 232, 182)",
+    "icons":[
+        {
+            "src":"img/happy.png",
+            "sizes":"192x192",
+            "type":"image/png"
+        }
+    ]
+    
+}
